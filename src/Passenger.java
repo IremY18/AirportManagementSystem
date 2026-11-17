@@ -7,8 +7,6 @@ public class Passenger {
     private int boardingGroup;
 
     // Getters
-
-
     public int getPassengerID() {
         return passengerID;
     }
