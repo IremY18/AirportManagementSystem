@@ -1,3 +1,4 @@
+//It is a class that works with FIFO principle
 public class BoardingQueue {
     private class RequestNode {
         BoardingRequest request;
@@ -56,7 +57,7 @@ public class BoardingQueue {
         return removed;
     }
 
-    //Size of the queue
+    //Return the number of requests in the queue
     public int size() {
         return size;
     }
