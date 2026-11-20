@@ -28,7 +28,7 @@ public class BoardingRequest {
 
     public String toString() {
         new java.util.Date(requestTime);
-        return "ID: " + passengerID + "  |  Flight: " + flightNumber + "  |  Time: " + requestTime;
+        return "ID: " + passengerID + "  |  Flight: " + flightNumber + "  |  Time: " + new java.util.Date(requestTime);
 
     }
 
