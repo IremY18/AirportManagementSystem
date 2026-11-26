@@ -1,7 +1,9 @@
+import javax.swing.*;
+
 public class PassengerList {
 
     //Starting point of the list
-    Node head;
+    private Node head;
 
     public PassengerList() {
         //The list is empty initially
@@ -84,5 +86,43 @@ public class PassengerList {
             System.out.println(current.passenger.toString());
             current = current.next;
         }
+    }
+
+    // ==== TASK 4 ====
+
+    private int getClassPriority(String ticketClass) {
+        if (ticketClass.equalsIgnoreCase("First")) {
+            return 1;
+        }
+        if (ticketClass.equalsIgnoreCase("Business")) {
+            return 2;
+        }
+        if (ticketClass.equalsIgnoreCase("Economy")) {
+            return 3;
+        }
+        return 999;
+    }
+
+    public void sortByTicketClass() {
+        if(head == null || head.next == null) {
+            return;
+        }
+
+        boolean swapped;
+
+        do {
+            swapped = false;
+            Node current = head;
+            while (current.next != null) {
+
+                if (getClassPriority(current.passenger.getTicketClass()) > getClassPriority(current.next.passenger.getTicketClass())) {
+                    Passenger temp = current.passenger;
+                    current.passenger = current.next.passenger;
+                    current.next.passenger = temp;
+                    swapped = true;
+                }
+                current = current.next;
+            }
+        } while (swapped);
     }
 }
