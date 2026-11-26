@@ -9,5 +9,5 @@ data structures (no java.util collections).
 ## Progress
 - [x] Task 1: Passenger management (singly linked list)
 - [x] Task 2: Boarding queue
-- [ ] Task 3: Boarding history (stack)
+- [x] Task 3: Boarding history (stack)
 - [ ] Task 4: Integration and sorting
