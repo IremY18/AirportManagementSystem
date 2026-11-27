@@ -1,5 +1,3 @@
-import javax.swing.*;
-
 public class PassengerList {
 
     //Starting point of the list
